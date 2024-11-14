@@ -1,5 +1,5 @@
 :root {
-    --primary: #00008B
+    --primary: burlywood
     --bg: #010101
   }
   
@@ -16,8 +16,19 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--bg);
       color:ghostwhite;
-      
+} 
 
-
-  
-  }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid burlywood;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
