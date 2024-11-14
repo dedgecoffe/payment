@@ -1,5 +1,5 @@
 :root {
-  --primary: #b6895b;
+  --primary: #ab631b;
   --bg: #010101;
   }
   
@@ -25,7 +25,7 @@
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid burlywood;
+  border-bottom: 1px solid #ab631b
   position: fixed;
   top: 0;
   left: 0;
