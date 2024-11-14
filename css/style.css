@@ -51,5 +51,7 @@
 }
 
 .navbar .navbar-nav a:hover {
-    
+  color: var(--primary)
+}
+
 }
