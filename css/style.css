@@ -96,7 +96,18 @@
       font-size: 62.5%;
     }
 
-    #drink-menu {}
+    #fooddrink-menu {
+      display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+      position: absolute;
+      top: 100%;
+      right: 100%;
+      background-color: ghostwhite;
+      width: 30rem;
+      height: 100vh;
+    }
 }
 
 /*Mobile Phone*/
