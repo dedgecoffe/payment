@@ -39,4 +39,8 @@
   color: ghostwhite;
 }
 
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
 
+.navbar .navbar-nav a {}
