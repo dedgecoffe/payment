@@ -1,61 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D'Edge Coffe</title>
-
-    <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
-
-    <!--Feather Icons-->
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <!--My Style-->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
 </head>
-
 <body>
-
-    <!--Navbar Start-->
-    <nav class="navbar">
-        <a href="#" class="navbar-logo">D'Edge<span>Coffe</span></a>
-
-        <div class="navbar-nav">
-            <a href="Home">Home</a>
-            <a href="About">Tentang Kami</a>
-            <a href="Menu">Menu</a>
-            <a href="Contact">Hubungi</a>
+    <div class="payment-container">
+        <h2>Metode Pembayaran</h2>
+        
+        <!-- QRIS Payment Option -->
+        <div class="payment-option">
+            <h3>Bayar dengan QRIS</h3>
+            <img src="qris-code.png" alt="QRIS Code"> <!-- Ganti dengan URL gambar QRIS Anda -->
+            <p>Scan kode QRIS di atas untuk melakukan pembayaran.</p>
         </div>
 
-        <div class="navbar-extra">
-            <a href="#" id="search"><i data-feather="search"></i></a>
-            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-            <a href="#" id="fooddrink-menu"><i data-feather="menu"></i></a>
+        <!-- Bank Transfer Payment Option -->
+        <div class="payment-option">
+            <h3>Transfer Bank</h3>
+            <p class="account-info">Bank: Bank Central Asia (BCA)</p>
+            <p class="account-info">Nomor Rekening: <span id="account-number">1234567890</span></p>
+            <button class="btn-copy" onclick="copyAccountNumber()">Salin Nomor Rekening</button>
+            <p class="success-message" id="copy-success">Nomor rekening berhasil disalin!</p>
         </div>
-    </nav>
-    <!--Navbar End-->
+    </div>
 
-    <!--Hero Section Start-->
-    <section class="hero" id="Home">
-      <main class="content">
-        <h1>Mari Nikmati Hidangan Kami</h1>
-        <p> Tempat yang nyaman dan pemandangan yang indah</p>
-        <a href="#" class="cta">Beli Sekarang</a>
-      </main>
-    </section>
-    <!--Hero Section End-->
-    
-    <!--Feather Icons-->
     <script>
-        feather.replace();
-    </script>
+        function copyAccountNumber() {
+            var accountNumber = document.getElementById("account-number").innerText;
+            navigator.clipboard.writeText(accountNumber).then(function() {
+                var successMessage = document.getElementById("copy-success");
+                successMessage.style.display = "block";
 
-    <!--My Javascript-->
-    <script src="js/script.js"></script>
+                setTimeout(function() {
+                    successMessage.style.display = "none";
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
