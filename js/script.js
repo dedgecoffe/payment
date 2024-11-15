@@ -7,3 +7,7 @@ document.querySelector('#fooddrinkmenu').oneclick = () => {
 
 //klik di luar sidebar untuk menghilangkan nav
 const fooddrink = document.querySelector ('#fooddrink-menu');
+
+document.addEventListener('click', function(e)) {
+    if(!fooddrink.contains(e.target))
+}
