@@ -76,9 +76,19 @@ body {
   color: var(--primary);
 }
 
-#drink-menu {
+#fooddrink-menu {
   display: none;
 }
+
+/*Hero Secion*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+
+min-
 
 /* Media Queries */
 
