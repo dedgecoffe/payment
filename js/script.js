@@ -9,5 +9,7 @@ document.querySelector('#fooddrinkmenu').oneclick = () => {
 const fooddrink = document.querySelector ('#fooddrink-menu');
 
 document.addEventListener('click', function(e)) {
-    if(!fooddrink.contains(e.target))
-}
+    if(!fooddrink.contains(e.target)) && !navbarNav.contains(e.target) {
+        navbarNav.classList.remove('active');
+    }
+});
