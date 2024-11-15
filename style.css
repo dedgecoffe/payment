@@ -67,132 +67,27 @@ font-size: 14px;
 margin-top: 10px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-
-html {
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-}
-
-img {
-    width: 100%;
-}
-
-/* Header Style */
-header {
+body {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    z-index: 1;
-}
-
-header.scrolled {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-header .logo a {
-    font-size: 30px;
-    color: white;
-    padding: 15px 30px;
-}
-
-header .logo a span {
-    color: orange;
-}
-
-header nav ul {
-    display: flex;
-}
-
-header nav ul li a {
-    margin: 5px 20px;
-    font-size: 18px;
-    color: white;
-    padding: 10px 10px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-header nav ul li a:hover {
-    border-bottom: 2px solid white;
-}
-
-/* Add Hamburger Icon for Smaller Screens */
-.hamburger {
-    display: none; /* Initially hide hamburger icon */
-    font-size: 30px;
-    color: white;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-/* Media Query for Small Screens */
-@media (max-width: 768px) {
-    header nav ul {
-        display: none; /* Hide the navigation links by default */
-    }
-
-    header .hamburger {
-        display: block; /* Show hamburger icon on small screens */
-    }
-
-    .hamburger.active + nav ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px 0;
-    }
-
-    header nav ul li a {
-        text-align: center;
-        padding: 15px;
-        font-size: 18px;
-    }
-}
-
-/* content */
-
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
     position: relative;
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(to bottom right, rgba(96, 76, 76, .6), rgba(96, 76, 76, .6)), url("Gambar/cafe utama.jpg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
+    background: url('gambar/cafe utama.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
-    animation: heroScroll 15s linear infinite;
+    animation: moveBackground 20s linear infinite;
+
 }
 
-@keyframes heroScroll {
-    0% {
-        background-position: center top;
+@keyframes moveBackground {
+    0%{
+        background-position: 0 0;
     }
-    100% {
-        background-position: center bottom;
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0 0;
     }
 }
